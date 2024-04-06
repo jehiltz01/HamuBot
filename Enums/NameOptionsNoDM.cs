@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HamuBot.Enums
+﻿namespace HamuBot.Enums
 {
-    internal class NameOptionsNoDM
+    public enum NameOptionsNoDM
     {
+        Amaya = 1,
+        Cal = 2,
+        Calem = 3,
+        Rayna = 4,
+        Reggie = 5,
+        Trix = 6,
+        Guests = 7
     }
 }

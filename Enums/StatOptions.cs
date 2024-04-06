@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HamuBot.Enums
+﻿namespace HamuBot.Enums
 {
-    internal class StatOptions
+    public enum StatOptions
     {
+        Nat20s,
+        Nat1s,
+        Kills,
+        BossKills,
+        Downed
     }
 }

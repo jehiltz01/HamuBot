@@ -1,10 +1,60 @@
 {
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
+  "month": 12,
+  "day": 3,
+  "monthly": "Everyone, pay cost of living fees.",
+  "countdownName": "",
+  "countdownNumber": "",
+  "reminder": "",
+  "customOpening": "",
+  "customSignoff": "",
+  "nat20s": {
+    "DM": 27,
+    "Amaya": 18,
+    "Cal": 14,
+    "Calem": 11,
+    "Rayna": 14,
+    "Reggie": 14,
+    "Trix": 19,
+    "Guests": 5
+  },
+  "nat1s": {
+    "DM": 24,
+    "Amaya": 5,
+    "Cal": 17,
+    "Calem": 10,
+    "Rayna": 19,
+    "Reggie": 10,
+    "Trix": 14,
+    "Guests": 2
+  },
+  "kills": {
+    "DM": 0,
+    "Amaya": 2,
+    "Cal": 2,
+    "Calem": 3,
+    "Rayna": 1,
+    "Reggie": 4,
+    "Trix": 1,
+    "Guests": 0
+  },
+  "bossKills": {
+    "DM": 0,
+    "Amaya": 0,
+    "Cal": 0,
+    "Calem": 2,
+    "Rayna": 0,
+    "Reggie": 0,
+    "Trix": 0,
+    "Guests": 1
+  },
+  "downed": {
+    "DM": 0,
+    "Amaya": 3,
+    "Cal": 3,
+    "Calem": 1,
+    "Rayna": 2,
+    "Reggie": 1,
+    "Trix": 4,
+    "Guests": 1
+  }
 }
