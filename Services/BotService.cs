@@ -35,6 +35,8 @@ namespace HamuBot.Services
 
         public async Task StartAsync(bool startQuietly)
         {
+            Console.WriteLine("StartAsync was called.");
+
             if (_isRunning) return;
 
             //Create config
@@ -85,6 +87,8 @@ namespace HamuBot.Services
 
         public async Task RunAsync(IHost host)
         {
+            Console.WriteLine("RunAsync was called.");
+
             // set up service provider 
             // used with dependency injection to retrieve everything from the host 
             using IServiceScope serviceScope = host.Services.CreateScope();
@@ -117,6 +121,9 @@ namespace HamuBot.Services
             };
 
             try {
+                var token = config["token"];
+                Console.WriteLine($"[DEBUG] token: {(string.IsNullOrWhiteSpace(token) ? "MISSING OR EMPTY" : token[..5] + "...")}");
+
                 //start connection with Discord API
                 await client.LoginAsync(TokenType.Bot, config["token"]);
                 await client.StartAsync();

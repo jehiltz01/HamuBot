@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(serverOptions => {
     serverOptions.ListenAnyIP(5000); // This allows outside connections
 });
+builder.Configuration.AddJsonFile("appsettings.json", optional: false);
 var app = builder.Build();
 
 // Instantiate BotService once — reuse for all endpoints
