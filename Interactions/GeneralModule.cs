@@ -1,5 +1,6 @@
 ﻿using Discord;
 using Discord.Interactions;
+using HamuBot.Services;
 using HamuBot.Utilities;
 
 namespace HamuBot.Interactions
@@ -15,12 +16,16 @@ namespace HamuBot.Interactions
         // TESTING
         //private ulong testingChannel = 1067291921606774804;
 
-        public GeneralModule()
+         private readonly BotShutdownService _shutdownService;
+
+        public GeneralModule(BotShutdownService shutdownService)
         {
             //Get SessionLog object
             var outputDir = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory);
             string slJson = File.ReadAllText(outputDir + "/sessionLog.json");
             sessionLog = Newtonsoft.Json.JsonConvert.DeserializeObject<SessionTracker>(slJson);
+
+            _shutdownService = shutdownService;
         }
 
         [SlashCommand("endsession", "Ends the session")]
@@ -46,10 +51,7 @@ namespace HamuBot.Interactions
             //wait for messages to send before closing connection
             await Task.Delay(1000);
 
-            await Context.Client.LogoutAsync();
-            await Context.Client.StopAsync();
-
-            Environment.Exit(1);
+            await _shutdownService.ShutdownAsync();
         }
 
         [SlashCommand("setreminder", "Sets a reminder for next session")]

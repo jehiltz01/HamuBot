@@ -24,7 +24,7 @@ namespace HamuBot.Interactions
         [SlashCommand("nat20", "Input player name and, optionally, +/- amount; default amount is 1")]
         public async Task Nat20SlashCmd(NameOptions input, int amount = 1)
         {
-            // Get curent value
+            // Get current value
             var curDieCount = 0;
             try {
                 curDieCount = Convert.ToInt32(sessionLog.Nat20s.GetType().GetProperty(input.ToString()).GetValue(sessionLog.Nat20s, null));
@@ -63,7 +63,7 @@ namespace HamuBot.Interactions
         [SlashCommand("nat1", "Input player name and, optionally, +/- amount; default amount is 1")]
         public async Task Nat1SlashCmd(NameOptions input, int amount = 1)
         {
-            // Get curent value
+            // Get current value
             var curDieCount = 0;
             try {
                 curDieCount = Convert.ToInt32(sessionLog.Nat1s.GetType().GetProperty(input.ToString()).GetValue(sessionLog.Nat1s, null));
@@ -102,7 +102,7 @@ namespace HamuBot.Interactions
         [SlashCommand("kills", "Input player name and, optionally, +/- amount; default amount is 1")]
         public async Task KillSlashCmd(NameOptionsNoDM input, int amount = 1)
         {
-            // Get curent value
+            // Get current value
             var curDieCount = 0;
             try {
                 curDieCount = Convert.ToInt32(sessionLog.Kills.GetType().GetProperty(input.ToString()).GetValue(sessionLog.Kills, null));
@@ -141,7 +141,7 @@ namespace HamuBot.Interactions
         [SlashCommand("bosskills", "Input player name and, optionally, +/- amount; default amount is 1")]
         public async Task BossKillSlashCmd(NameOptionsNoDM input, int amount = 1)
         {
-            // Get curent value
+            // Get current value
             var curDieCount = 0;
             try {
                 curDieCount = Convert.ToInt32(sessionLog.BossKills.GetType().GetProperty(input.ToString()).GetValue(sessionLog.BossKills, null));
@@ -180,7 +180,7 @@ namespace HamuBot.Interactions
         [SlashCommand("downed", "Input player name and, optionally, +/- amount; default amount is 1")]
         public async Task DownedSlashCmd(NameOptionsNoDM input, int amount = 1)
         {
-            // Get curent value
+            // Get current value
             var curDieCount = 0;
             try {
                 curDieCount = Convert.ToInt32(sessionLog.Downed.GetType().GetProperty(input.ToString()).GetValue(sessionLog.Downed, null));
